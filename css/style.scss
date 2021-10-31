@@ -27,6 +27,10 @@ $accent-color: #F16D7F;
     @include start;
 }
 
+button {
+    cursor: pointer;
+}
+
 .header {
     background-color: $dark-color;
     position: relative;
@@ -57,6 +61,7 @@ $accent-color: #F16D7F;
                 align-items: center;
                 & img {
                     margin-right: 33px; 
+                    cursor: pointer;
                 }
             }
             & input {
@@ -65,21 +70,25 @@ $accent-color: #F16D7F;
                     display: block;
                 }
             }
-            & img {
+            & a {
+                display: flex;
+                align-items: center;
+                & > img {
                 cursor: pointer;
-                &:not(:last-child) {
+                }
+                &:not(:nth-child(4)) {
                     margin-right: 33px; 
-                        @media (max-width: 375px) {
-                            display:none;
-                        }
-            }
+                }
+                @media (max-width: 375px) {
+                    display:none;
+                }
             }
             &__menu {
                 display: none;
                 width: 232px;
-                height: calc(100vh - 80px);
+                height: calc(100vh - 76px);
                 position: absolute;
-                top: 80px;
+                top: 76px;
                 right: 0;
                 background-color: white;
                 padding-left: 34px;
@@ -1196,6 +1205,7 @@ $accent-color: #F16D7F;
                     text-decoration: none;
                     text-align: center;
                     color: #FFFFFF;
+                    cursor: pointer;
                 }
             }
         }
